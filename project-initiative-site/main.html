@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Та САМАЯ Россия</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header id="header">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="#hero" class="logo-link" aria-label="Главная">
+                    <img src="https://static.tildacdn.info/tild3238-3263-4763-b737-373635623637/noroot.png" alt="Логотип">
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="menu">
+                    <li><a href="teams.html">Команда</a></li>
+                    <li><a href="#rec1032808751">Интерактивная карта</a></li>
+                    <li><a href="partners.html">Партнёры</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-video">
+            <iframe src="https://rutube.ru/play/embed/8b07ab2281235edaec284f914a355817/?p=&autoplay=true&muted=true&controls=false&loop=true" 
+                    style="border: none;" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" 
+                    allowfullscreen></iframe>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Та САМАЯ Россия</h1>
+            <p>Кластер международных исторических проектов</p>
+        </div>
+        <div class="hero-arrow">
+            <svg role="presentation" width="38" height="18" viewBox="0 0 38.417 18.592" fill="#ffffff">
+                <path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413
+                         c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066
+                         c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"/>
+            </svg>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>О нас</h2>
+                <p>Та САМАЯ Россия - это проект, направленный на сохранение и трансляцию исторического наследия Российской Федерации в формате виртуальных экскурсий из музейно-выставочных комплексов России и стран СНГ</p>
+            </div>
+            <div class="about-image">
+                <img src="https://static.tildacdn.info/tild3736-3966-4533-b762-333534653039/-1_1.jpg" alt="О нас">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 
+        АДМИНИСТРИРОВАНИЕ НОВОСТЕЙ:
+        Для добавления новой новости скопируйте блок <article class="news-item">...</article>
+        Для редактирования новости измените:
+        - href="#" в <a> - ссылка на полную статью
+        - src в <img> - ссылка на изображение
+        - alt в <img> - описание изображения
+        - <h3 class="news-heading"> - заголовок новости
+        - <p class="news-excerpt"> - краткое описание
+        - <span class="news-date"> - дата публикации
+        - data-admin-id и data-news-id - уникальные идентификаторы
+    -->
+    <section id="news">
+        <div class="news-container">
+            <h2 class="news-title">Новости</h2>
+            
+            <div class="news-grid">
+                <!-- Новость 1 -->
+                <article class="news-item" data-admin-id="1748429937265" data-news-id="1">
+                    <a href="#" class="news-link" target="_blank">
+                        <div class="news-image-wrapper">
+                            <img src="img/news1.png" alt="Новость 1" class="news-image">
+                        </div>
+                        <div class="news-content">
+                            <p class="news-text">Текст</p>
+                            <span class="news-date">дата</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Новость 2 -->
+                <article class="news-item" data-admin-id="1748429900179" data-news-id="2">
+                    <a href="#" class="news-link" target="_blank">
+                        <div class="news-image-wrapper">
+                            <img src="img/news2.png" alt="Новость 2" class="news-image">
+                        </div>
+                        <div class="news-content">
+                            <p class="news-text">Текст</p>
+                            <span class="news-date">дата</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Новость 3 -->
+                <article class="news-item" data-admin-id="1748429912345" data-news-id="3">
+                    <a href="#" class="news-link" target="_blank">
+                        <div class="news-image-wrapper">
+                            <img src="img/news3.png" alt="Новость 3" class="news-image">
+                        </div>
+                        <div class="news-content">
+                            <p class="news-text">Текст</p>
+                            <span class="news-date">дата</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            
+            <div class="news-button-wrapper">
+                <a href="#" class="news-button">Кнопка</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="history-line">
+        <div class="history-line-container">
+            <h2 class="history-line-title">Исторические линии проекта</h2>
+            
+            <div class="history-line-content">
+                <div class="history-line-images-left">
+                    <img src="img/path.svg" alt="Декоративная линия" class="history-line-path">
+                    <img src="img/path.svg" alt="Декоративная линия" class="history-line-path">
+                </div>
+                
+                <div class="history-line-image-wrapper">
+                    <img src="img/historyLine-Castel.png" alt="Исторические линии проекта" class="history-line-image">
+                </div>
+                
+                <div class="history-line-images-right">
+                    <img src="img/path.svg" alt="Декоративная линия" class="history-line-path">
+                    <img src="img/path.svg" alt="Декоративная линия" class="history-line-path">
+                </div>
+            </div>
+            
+            <p class="history-line-description">Описание</p>
+        </div>
+    </section>
+
+    <section id="interactive-map">
+        <div class="interactive-map-container">
+            <h2 class="interactive-map-title">Интерактивная карта</h2>
+            
+            <div class="interactive-map-content">
+                <a href="#" class="news-button">Кнопка</a>
+                
+                <div class="interactive-map-top">
+                    <img src="img/interactive-map-blue.png" alt="Синяя метка" class="interactive-map-icon interactive-map-icon-left">
+                    
+                    <div class="interactive-map-paths">
+                        <img src="img/path.svg" alt="Путь" class="interactive-map-path" style="--path-scale: -1; --path-rotation: -30deg; --path-translate-x: -12px; --path-translate-y: -35px;">
+                        <img src="img/path.svg" alt="Путь" class="interactive-map-path" style="--path-scale: -1; --path-rotation: -15deg; --path-translate-x: -20px; --path-translate-y: 8px;">
+                        <img src="img/path.svg" alt="Путь" class="interactive-map-path" style="--path-scale: -1; --path-rotation: -6deg; --path-translate-x: -20px; --path-translate-y: 20px;">
+                        <img src="img/path.svg" alt="Путь" class="interactive-map-path" style="--path-scale: -1; --path-rotation: -6deg; --path-translate-x: -20px; --path-translate-y: 20px;">
+                        <img src="img/path.svg" alt="Путь" class="interactive-map-path" style="--path-scale: -1; --path-rotation: -6deg; --path-translate-x: -20px; --path-translate-y: 15px;">
+                    </div>
+                    
+                    <img src="img/interactive-map-red.png" alt="Красная метка" class="interactive-map-icon interactive-map-icon-right">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners">
+        <div class="partners-container">
+            <h2 class="partners-title">Партнёры</h2>
+            
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <a href="#" class="partner-logo" aria-label="Уральский федеральный университет">
+                        <img src="img/partners1.png" alt="Уральский федеральный университет">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#" class="partner-logo" aria-label="Партнёр 2">
+                        <img src="img/partners2.png" alt="Партнёр 2">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#" class="partner-logo" aria-label="ГАЗПРОМ ДОБЫЧА УРЕНГОЙ">
+                        <img src="img/partners3.png" alt="ГАЗПРОМ ДОБЫЧА УРЕНГОЙ">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#" class="partner-logo" aria-label="ГАЗПРОМ ДОБЫЧА НАДЫМ">
+                        <img src="img/partners1.png" alt="ГАЗПРОМ ДОБЫЧА НАДЫМ">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#" class="partner-logo" aria-label="Партнёр 3">
+                        <img src="img/partners2.png" alt="Партнёр 3">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#" class="partner-logo" aria-label="Партнёр 4">
+                        <img src="img/partners3.png" alt="Партнёр 4">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#" class="partner-logo" aria-label="Партнёр 5">
+                        <img src="img/partners1.png" alt="Партнёр 5">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#" class="partner-logo" aria-label="Партнёр 6">
+                        <img src="img/partners2.png" alt="Партнёр 6">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="img/logoFooter.png" alt="Логотип" class="footer-logo-image">
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <a href="tel:+79226588563" class="footer-phone">+7 (922) 658-85-63</a>
+                <div class="footer-nav-columns">
+                    <div class="footer-nav-column">
+                        <a href="#hero" class="footer-link">Главная</a>
+                        <a href="teams.html" class="footer-link">Команда проекта</a>
+                        <a href="news.html" class="footer-link">Новости</a>
+                        <a href="historyLine.html" class="footer-link">Исторические линии</a>
+                    </div>
+                    <div class="footer-nav-column">
+                        <a href="#interactive-map" class="footer-link">Интерактивная карта</a>
+                        <a href="partners.html" class="footer-link">Партнёры</a>
+                        <a href="contacts.html" class="footer-link">Контакты</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <a href="mailto:volural@gmail.com" class="footer-email">volural@gmail.com</a>
+                <div class="footer-social">
+                    <a href="#" target="_blank" class="footer-social-icon" aria-label="VKontakte">
+                        <img src="img/logoVK.png" alt="VKontakte" class="footer-social-image">
+                    </a>
+                    <a href="#" target="_blank" class="footer-social-icon" aria-label="Telegram">
+                        <img src="img/logoTG.png" alt="Telegram" class="footer-social-image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
