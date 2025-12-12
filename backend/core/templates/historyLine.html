@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исторические линии - Та САМАЯ Россия</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/historyLine.css' %}">
+</head>
+<body>
+    <header id="header">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="/" class="logo-link" aria-label="Главная">
+                    <img src="https://static.tildacdn.info/tild3238-3263-4763-b737-373635623637/noroot.png" alt="Логотип">
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="menu">
+                    <li><a href="teams.html">Команда</a></li>
+                    <li><a href="main.html#interactive-map">Интерактивная карта</a></li>
+                    <li><a href="partners.html">Партнёры</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="history-line-hero">
+        <div class="history-line-wrapper">
+            <div class="history-line-background">
+                <img src="{% static 'img/historyLine-Castel.png' %}" alt="Исторические линии" class="history-line-image">
+                <div class="history-line-overlay"></div>
+            </div>
+            <div class="history-line-content">
+                <h1 class="history-line-title">
+                    <span class="history-line-title-line">ИСТОРИЧЕСКИЕ</span>
+                    <span class="history-line-title-line">ЛИНИИ</span>
+                </h1>
+                <a href="#history-line-content" class="history-line-cta">
+                    <span>Смотреть</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                        <path d="M8 0L6.59 1.41L12.17 7H0v2h12.17l-5.58 5.59L8 16l8-8z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="history-line-arrow">
+                <svg role="presentation" width="38" height="18" viewBox="0 0 38.417 18.592" fill="#ffffff">
+                    <path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413
+                             c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066
+                             c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="history-line-content">
+        <div class="history-line-content-container">
+            <h2 class="history-line-content-title">Исторические линии</h2>
+    
+            <div class="history-line-row">
+    
+                {% for line in history_lines %}
+                    <!-- Одна картинка + описание -->
+                    <div class="history-line-item">
+    
+                        <!-- Картинка -->
+                        <div class="history-line-image-placeholder">
+                            <img 
+                                src="{{ line.image.url }}" 
+                                alt="{{ line.title }}"
+                                class="history-line-placeholder-img"
+                                onclick="openHistoryModal(this)"
+                                data-title="{{ line.title }}"
+                                data-description="{{ line.description }}"
+                            >
+                        </div>
+    
+                        <!-- Подпись -->
+                        <div class="history-line-description">
+                            <p>{{ line.description }}</p>
+                        </div>
+                    </div>
+    
+                    {% if not forloop.last %}
+                        <!-- Соединитель -->
+                        <div class="history-line-connector">
+                            <img src="{% static 'img/path.svg' %}" alt="">
+                        </div>
+                    {% endif %}
+    
+                {% empty %}
+                    <p>Исторических линий пока нет.</p>
+                {% endfor %}
+    
+            </div>
+        </div>
+    
+        <!-- Модальное окно -->
+        <div id="history-modal" class="history-modal">
+            <div class="history-modal-content">
+                
+    
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+    
+            </div>
+        </div>
+
+
+        <div id="history-modal" class="history-modal">
+            <div class="history-modal-content">
+                <span class="modal-close" onclick="closeHistoryModal()">&times;</span>
+        
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+        
+    </section>
+    
+    
+    
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="{% static 'img/logoFooter.png' %}" alt="Логотип" class="footer-logo-image">
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <a href="tel:+79226588563" class="footer-phone">+7 (922) 658-85-63</a>
+                <div class="footer-nav-columns">
+                    <div class="footer-nav-column">
+                        <a href="main.html#hero" class="footer-link">Главная</a>
+                        <a href="teams.html" class="footer-link">Команда проекта</a>
+                        <a href="news.html" class="footer-link">Новости</a>
+                        <a href="historyLine.html" class="footer-link">Исторические линии</a>
+                    </div>
+                    <div class="footer-nav-column">
+                        <a href="main.html#interactive-map" class="footer-link">Интерактивная карта</a>
+                        <a href="partners.html" class="footer-link">Партнёры</a>
+                        <a href="contacts.html" class="footer-link">Контакты</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <a href="mailto:volural@gmail.com" class="footer-email">volural@gmail.com</a>
+                <div class="footer-social">
+                    <a href="#" target="_blank" class="footer-social-icon" aria-label="VKontakte">
+                        <img src="{% static 'img/logoVK.png' %}" alt="VKontakte" class="footer-social-image">
+                    </a>
+                    <a href="#" target="_blank" class="footer-social-icon" aria-label="Telegram">
+                        <img src="{% static 'img/logoTG.png' %}" alt="Telegram" class="footer-social-image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
+
