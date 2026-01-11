@@ -29,7 +29,7 @@ python manage.py runserver
 
 
 ### Структура проекта
- backend/
+ site/
  ├── manage.py
  ├── db.sqlite3
  ├── backend/
