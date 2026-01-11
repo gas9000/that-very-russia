@@ -16,6 +16,7 @@ venv\Scripts\activate
 
 ### 3. Установка зависимостей
 pip install -r requirements.txt
+или pip install django и pip install pillow
 
 ### 4. Применение миграций
 python manage.py migrate
